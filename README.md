@@ -1,16 +1,58 @@
-# BookMate
-A lightweight Flask application that provides content-based book recommendations using TF–IDF and cosine similarity, supports mood-based boosts, CSV import, and user feedback collection.
+# BookMate 
 
-Features
+A personalised, mood‑aware and preference‑driven **book recommendation app** built entirely in **Streamlit**, using TF–IDF similarity, genre/author boosts, mood mapping, and personalized text‑based signals.
 
-Content-based recommendations using TfidfVectorizer and cosine similarity.
+**🌟 Features**
 
-Mood-aware recommendations (boosts based on mood → tag mappings).
+Personalized Recommendations
 
-Accepts user-provided favourite titles as seeds.
+* Enter favourite books, disliked ones, reviews, preferred genres, and authors.
+* TF–IDF vectors + cosine similarity score how well each book matches your personal taste.
+* Genre and author overlap boosts relevance.
 
-Series continuation suggestions (if series and series_index are present).
+Mood‑Based Recommendations
 
-CSV upload endpoint to temporarily import/augment book data for the session.
+* Choose from predefined moods (Happy, Sad, Romantic, Adventurous, etc.).
+* Or type a **custom mood** — the model converts it into a semantic vector.
+* Uses both similarity scores and tag/genre keyword matching.
 
-Simple JSON feedback collection saved to feedback.json.
+Elegant UI & Animations
+
+* Custom full‑screen loader animation.
+* Soft pastel theme, custom CSS, centered tabs, responsive card grid.
+* Modern cards: genre badges, summaries, Google search button.
+* Clean header with inline logo + About section.
+
+### 🔸 Data Handling
+
+* Automatically loads `books.csv` if present.
+* Falls back to 5 curated sample books.
+* Caches TF–IDF and dataset for fast re-runs.
+
+TF–IDF Engine
+* Combines *title + author + genres + tags + summary* into a single text corpus.
+* Vectorizes it with `TfidfVectorizer(max_features=2000, stop_words='english')`.
+* Uses cosine similarity to compare user preferences/moods with each book.
+
+Personalized Model
+* Positive similarity boosts.
+* Negative similarity penalties for disliked books.
+* Extra scoring for genre matches and author matches.
+
+Mood Model
+* Maps moods → keyword lists.
+* Computes similarity + tag matching for final ranking.
+
+
+
+UI Highlights
+* Fully custom CSS: cards, badges, buttons, sidebar, tabs.
+* Full‑bleed gradient header with About button.
+* Animated loading screen with bouncing dots.
+* Responsive layout with adjustable columns.
+
+
+
+🙌 Acknowledgements
+
+Built with Streamlit, pandas, NumPy, scikit‑learn, and lots of pink pastel love.
