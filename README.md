@@ -2,7 +2,7 @@
 
 A personalised, mood‑aware and preference‑driven **book recommendation app** built entirely in **Streamlit**, using TF–IDF similarity, genre/author boosts, mood mapping, and personalized text‑based signals.
 
-**🌟 Features**
+**Features**
 
 Personalized Recommendations
 
@@ -23,7 +23,7 @@ Elegant UI & Animations
 * Modern cards: genre badges, summaries, Google search button.
 * Clean header with inline logo + About section.
 
-### 🔸 Data Handling
+### Data Handling
 
 * Automatically loads `books.csv` if present.
 * Falls back to 5 curated sample books.
@@ -52,7 +52,6 @@ UI Highlights
 * Responsive layout with adjustable columns.
 
 
-
-🙌 Acknowledgements
+Acknowledgements
 
 Built with Streamlit, pandas, NumPy, scikit‑learn, and lots of pink pastel love.
